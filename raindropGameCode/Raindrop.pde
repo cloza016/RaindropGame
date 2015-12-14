@@ -1,11 +1,11 @@
-class Raindrop(){
-  //declaring all information (fields) contained within the Raindrop class
+class Raindrop{
+  //declaring all fields contained within the Raindrop class
   PVector loc,vel;
   int diam;
   color c;
   
   //set up constructor
-  Raindrop(){
+  Raindrop(float x,float y){
     diam=200;
     loc=new PVector(random(diam,width-diam),random(diam,height-diam));
     vel=PVector.random2D();
@@ -27,7 +27,7 @@ class Raindrop(){
   }
   
   void fall(){  //make raindrop fall
-    loc.sub(vel);  //subtract velocity from location
+    loc.y+=vel.x;
   }
   
   void reset(){
@@ -40,8 +40,6 @@ class Raindrop(){
   }
   
   boolean isInContactWith(){
-  
-  
-  
+    
   }
 }
