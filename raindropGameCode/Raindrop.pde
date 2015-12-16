@@ -18,10 +18,10 @@ class Raindrop{
     noStoke();
     ellipse(loc.x,loc.y,diam,diam);
     
-    if(loc.x>width||loc.x<0){
+    if(loc.x>width || loc.x<0){
       vel.x*=-1;
     }
-    if(loc.y>height||loc.y<0){
+    if(loc.y>height || loc.y<0){
       vel.y*=-1;
     }
   }
@@ -31,11 +31,11 @@ class Raindrop{
   }
   
   void reset(){
-    if(r.isInContactWith(mouse)){
-      return;
+    if(r.isInContactWith(loc.dist<diam/2)){
+      return true;
     }
     if(r.loc.y > height + r.diam/2){
-      return;
+      return false;
     } 
   }
   
