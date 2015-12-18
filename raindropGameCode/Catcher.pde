@@ -1,24 +1,18 @@
 class Catcher{
+  PVector loc;
+  int diam;
   
-  void display(){
-    
-    
-    
+Catcher(int tdiam){
+  loc = new PVector();
+  diam = tdiam;
   }
   
-  void update(){
-    
-    
-    
-    
-  }
+void display(){
+  fill(0);
+  ellipse(loc.x,loc.y,diam,diam);
+}
   
-  
-  
-  
-  
-  
-  
-  
-  
+void update(){
+  loc.set(mouseX,mouseY);
+  } 
 }
