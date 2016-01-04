@@ -27,7 +27,12 @@ void fall(){  //make raindrop fall
   loc.add(vel);
   }
   
-void rebirth() {
+void dead(){
+  
+  
+}
+
+void rebirth(){
   loc.set(random(width),random(-height,0));
   vel.set(0,0);
 }

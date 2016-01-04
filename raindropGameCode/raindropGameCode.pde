@@ -1,3 +1,5 @@
+//note to self: add dead, add scoreboard?, submit via pull request
+
 ArrayList<Raindrop> raindrops = new ArrayList<Raindrop>();  //declare and initialize the ArrayList
 int count = 100;
 PVector mouse;   //declare a P
@@ -24,6 +26,9 @@ void draw(){
     r.fall();  //make the raindrop fall. It should accelerate as if pulled towards the ground by earth's gravity
     c.display();
     c.update();
+    if(r.isDead()){  //if r is dead...
+      raindrops.remove(i);  //remove particle at location i
+    }
     if(r.isInContactWith(mouse)) {  //check to see if the raindrop is in contact with the point represented by the PVector called mouse
       r.rebirth();  //if it is, reset the raindrop
     }
