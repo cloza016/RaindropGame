@@ -2,9 +2,10 @@ class Catcher{
   PVector loc;
   int diam;
   
-Catcher(int tdiam){
-  loc = new PVector();
-  diam = tdiam;
+Catcher(int tDiam){
+  loc = new PVector(mouseX,mouseY);
+  diam = tDiam;
+  tDiam = 40;
   }
   
 void display(){
@@ -14,5 +15,5 @@ void display(){
   
 void update(){
   loc.set(mouseX,mouseY);
-  } 
+} 
 }
